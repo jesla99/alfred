@@ -1,0 +1,44 @@
+/* Estilos para el tooltip y resaltado de la guía */
+.guided-assistant-highlight {
+  outline: 2px solid #007bff !important;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5) !important;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.guided-assistant-tooltip {
+  position: absolute;
+  z-index: 99999;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  max-width: 250px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.guided-assistant-tip {
+  margin-bottom: 10px;
+}
+
+.guided-assistant-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.guided-assistant-nav button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 3px;
+  width: auto;
+}
+
+.guided-assistant-nav button:hover {
+  background-color: #e0e0e0;
+}

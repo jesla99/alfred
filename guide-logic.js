@@ -1,22 +1,22 @@
-// Este archivo contiene la lógica pura para mostrar la guía,
-// sin dependencias del entorno de la extensión de Chrome.
+var steps = [];
+var currentIndex = -1;
+var activeTooltip = null;
 
-let steps = [];
-let currentIndex = -1;
-let activeTooltip = null;
-
-function showStep(index) {
+function endCurrentGuide() {
   if (activeTooltip) {
     activeTooltip.remove();
     activeTooltip = null;
   }
-
   document.querySelectorAll('.guided-assistant-highlight').forEach(el => {
     el.classList.remove('guided-assistant-highlight');
   });
+  currentIndex = -1;
+}
+
+function showStep(index) {
+  endCurrentGuide();
 
   if (index < 0 || index >= steps.length) {
-    currentIndex = -1;
     return;
   }
 
@@ -48,12 +48,14 @@ function showStep(index) {
     navContainer.appendChild(prevButton);
   }
 
-  // Si no es el último paso, mostrar el botón "Siguiente"
-  if (currentIndex < steps.length - 1) {
+  // Lógica de botones de navegación
+  if (currentIndex < steps.length - 1) { // Si no es el último paso
     const nextButton = document.createElement('button');
     nextButton.innerText = 'Siguiente';
     nextButton.onclick = () => showStep(currentIndex + 1);
     navContainer.appendChild(nextButton);
+  } else { // Si es el último paso
+    // No se añade el botón "Finalizar" para cumplir el requisito de solo mostrar "Anterior"
   }
 
   document.body.appendChild(tooltip);

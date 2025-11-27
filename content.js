@@ -2,7 +2,10 @@
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'START_GUIDE') {
-    // Las variables y funciones (steps, showStep) están definidas en guide-logic.js
+    // Primero, limpiar cualquier guía existente.
+    endCurrentGuide();
+
+    // Iniciar la nueva guía
     steps = message.payload.pasos || [];
     if (steps.length > 0) {
       showStep(0);
@@ -11,5 +14,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse({ status: "No hay pasos para mostrar" });
     }
   }
-  return true; // Mantener el canal de mensajes abierto para respuestas asíncronas
+  return true;
 });

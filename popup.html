@@ -3,10 +3,16 @@
 <head>
   <title>Asistente Guiado</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body { width: 300px; padding: 10px; font-family: sans-serif; }
+    textarea { width: 95%; margin-bottom: 10px; }
+    button { width: 100%; padding: 8px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+  </style>
 </head>
 <body>
   <h3>Asistente Guiado</h3>
-  <textarea id="json-data" rows="10" cols="30" placeholder="Pega aquí el JSON del proceso..."></textarea>
+  <textarea id="json-data" rows="10" placeholder="Pega aquí el JSON del proceso..."></textarea>
   <button id="start-guide">Iniciar Guía</button>
   <script src="popup.js"></script>
 </body>

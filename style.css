@@ -1,38 +1,9 @@
-/* Estilos para el popup de la extensión */
-body {
-  font-family: sans-serif;
-  width: 250px;
-  padding: 10px;
-}
-
-h3 {
-  margin-top: 0;
-}
-
-textarea {
-  width: 95%;
-  margin-bottom: 10px;
-}
-
-button {
-  width: 100%;
-  padding: 8px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-
-/* Estilos para la guía en la página */
+/* Estilos para el tooltip y resaltado de la guía */
 .guided-assistant-highlight {
   outline: 2px solid #007bff !important;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5) !important;
   border-radius: 4px;
+  transition: all 0.2s;
 }
 
 .guided-assistant-tooltip {
@@ -46,6 +17,7 @@ button:hover {
   max-width: 250px;
   font-family: sans-serif;
   font-size: 14px;
+  color: #333;
 }
 
 .guided-assistant-tip {
@@ -55,6 +27,7 @@ button:hover {
 .guided-assistant-nav {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .guided-assistant-nav button {
@@ -63,7 +36,7 @@ button:hover {
   background-color: #f0f0f0;
   cursor: pointer;
   border-radius: 3px;
-  width: auto; /* Sobrescribir el ancho del botón del popup */
+  width: auto;
 }
 
 .guided-assistant-nav button:hover {

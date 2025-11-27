@@ -1,0 +1,71 @@
+/* Estilos para el popup de la extensión */
+body {
+  font-family: sans-serif;
+  width: 250px;
+  padding: 10px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+textarea {
+  width: 95%;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Estilos para la guía en la página */
+.guided-assistant-highlight {
+  outline: 2px solid #007bff !important;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5) !important;
+  border-radius: 4px;
+}
+
+.guided-assistant-tooltip {
+  position: absolute;
+  z-index: 99999;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  max-width: 250px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.guided-assistant-tip {
+  margin-bottom: 10px;
+}
+
+.guided-assistant-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.guided-assistant-nav button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 3px;
+  width: auto; /* Sobrescribir el ancho del botón del popup */
+}
+
+.guided-assistant-nav button:hover {
+  background-color: #e0e0e0;
+}
